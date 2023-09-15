@@ -8,7 +8,7 @@ namespace = {}
 input_data = [[0,1,2,3,4,5,6],[3,4,2],[123,232,1],[1234]]
 
 # this is the target function (changes daily)
-def target_func(x): 
+def target_func(x):
     x = list(x)
     return int(len(x))+int(sum(x))
 
