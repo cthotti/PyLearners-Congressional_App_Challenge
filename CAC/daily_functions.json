@@ -1,0 +1,11 @@
+[
+    {
+        "day": 0,
+        "function": "#this is the daily function\ndef target_func(x):\n    return sum(x)+len(x)\n",
+        "test_cases": [[0,1,2,3,4,5,5,5,5,6],[3,4,2],[123,232,1],[134]]
+    },
+    {
+        "function": "#this is the daily function\ndef target_func(x):\n    return x+3\n",
+        "test_cases": [1,2,3,4,5,6,7]
+    }
+]
