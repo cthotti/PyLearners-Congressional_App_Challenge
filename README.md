@@ -2,8 +2,8 @@
 Congressional App Challenge
 
 Apps Plan on Creating First: 
-- Wordle --> Chetan and
-- Function Guesser --> Yechan and 
+- Wordle --> Chetan and Ming
+- Function Guesser --> Yechan and Woojin
 
 Wordle Process:
 1. First create wordle engine
