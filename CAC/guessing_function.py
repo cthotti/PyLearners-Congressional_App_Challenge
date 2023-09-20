@@ -1,7 +1,21 @@
 import json
-import datetime
+from datetime import date
 
-day = 0
+day = -1
+#format is YYYY-MM-DD
+today_date = date.today()
+
+# stores yesterday's date to determine if a new day has begun, iso converts string to YYYY-MM-DD
+yesterday_date = None
+with open('day.txt') as f:
+    yesterday_str = f.read()
+    yesterday_date = date.fromisoformat(yesterday_str)
+
+#if day has changed then day counter increases and today's date is stored in day.txt
+if today_date != yesterday_date:
+    day += 1
+    with open('day.txt') as f:
+        f.write(str(today_date))
 
 # takes in the json data into python format from daily_functions.json
 jsondata=None
