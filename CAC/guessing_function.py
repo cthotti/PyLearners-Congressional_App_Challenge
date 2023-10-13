@@ -1,7 +1,5 @@
 import json
-import datetime
-
-day = 0
+from datetime import datetime
 
 # takes in the json data into python format from daily_functions.json
 jsondata=None
@@ -9,6 +7,10 @@ with open('daily_functions.json') as f:
     rawjson = f.read()
     jsondata = json.loads(rawjson)
 
+#takes care of the daily aspect
+day0 = datetime(2023, 10, 12)
+daycurrent = datetime.now()
+day = ((daycurrent - day0).days)%len(jsondata) #covers for out-of-range errors
 
 input_data = jsondata[day]['test_cases']
 
