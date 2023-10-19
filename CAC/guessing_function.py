@@ -4,7 +4,7 @@ from collections import deque
 
 # takes in the json data into python format from daily_functions.json
 jsondata=None
-with open('daily_functions.json') as f:
+with open('CAC/daily_functions.json') as f:
     rawjson = f.read()
     jsondata = json.loads(rawjson)
 
@@ -35,7 +35,7 @@ def colorcheck(x): #this is the system for having colors represent the percentag
 def guess_function(): # this will take in the new user input from text box as the function
     # this reads the text file from test_code.txt
     test_code = None
-    with open('test_code.txt') as f:
+    with open('CAC/test_code.txt') as f:
         test_code = f.read()
 
     try:  # in case there are errors in the actual code in test_code

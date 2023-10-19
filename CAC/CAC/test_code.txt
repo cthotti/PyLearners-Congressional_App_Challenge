@@ -1,2 +1,1 @@
-def test_func(x):
-    return len(x)
+dummyvar = 10

@@ -1,43 +1,67 @@
 import json
+from datetime import datetime
+from collections import deque
 
-# namespace is necessary for functions within the txt file to appear
-# in the global namespace while using the exec() command
-namespace = {}
+day0 = datetime(2023, 10, 12)
+attempts=0
+daycurrent = None
+day = None
+test_cases = None
+jsondata = None
+target_func = None
 
-# these are the test cases (changes daily)
-input_data = [[0,1,2,3,4,5,6],[3,4,2],[123,232,1],[1234]]
+with open('daily_functions.json') as f:
+    rawjson = f.read()
+    jsondata = json.loads(rawjson)
 
-# this is the target function (changes daily)
-def target_func(x):
-    x = list(x)
-    return int(len(x))+int(sum(x))
+def variable_initialize():
+    global daycurrent
+    global day
+    global test_cases
+    global target_func
+    global jsondata
 
+    daycurrent = datetime.now()
+    day = ((daycurrent - day0).days) % len(jsondata)
+    test_cases = jsondata[day]['test_cases']
+    local_vars = {}
+    exec(jsondata[day]['function'], globals(), local_vars)
+    target_func = local_vars['target_func']
 
-# this reads the text file from test_code.txt
-test_code = None
-with open('test_code.txt') as f:
-    test_code = f.read()
+def guessfunction():
+    global attempts
 
+    test_code = None
+    with open('test_code.txt') as f:
+        test_code = f.read()
 
-try: # in case there are errors in the actual code in test_code
-    exec(test_code, namespace)
-    if 'test_func' in namespace: # checks that the user defined their function as test_func
-        for i in input_data: #compares each test case with the target_func and test_func
-            if target_func(i) == namespace['test_func'](i):
-                print(f'{i}: true {target_func(i)}')
-            else:
-                x=namespace['test_func'](i)
-                print(f'{i}: false, got {x} expected {target_func(i)}')
-    else:
-        print('test_func() not found in code')
-except Exception as e: #catches any exceptions while running test_code
-    print(f'An error occurred while executing the code: {str(e)}')
+    fhand = open('test_code.txt','w')
+    fhand.close()
+    fhand = open('test_code.txt','w')
+    fhand.write(test_code)
 
-while True: #separate block for the section where the user will test their own cases to target_func
-    test_input = input()
-    if test_input == '': #press enter to escape while loop
-        break
+    try:  # in case there are errors in the actual code in test_code
+        local_vars={} # establishes a separate local namespace to put 'test_func' into because python is looking at the local scope of guess_function()
+        exec(test_code, globals(), local_vars) # STORES test_func from test_code IN THE LOCAL_VARS
+        if 'test_func' in local_vars:  # checks that the user defined their function as test_func
+            total_correct = 0
+            test_func = local_vars['test_func'] # creates function test_func as the test_func from local vars
+            for i in test_cases:  # compares each test case with the target_func and test_func
+                if target_func(i) == test_func(i):
+                    total_correct += 1
+            percent_correct = int(total_correct * 100 / len(test_cases))  # % correct on the test cases
+            attempts += 1
+            return percent_correct
+        else:
+            return 'test_func() not found in code'
+    except Exception as e:  # catches any exceptions while running test_code
+        return str(e)
+
+def sidebar(x):
     try:
-        print(target_func(json.loads(test_input)))
+        return target_func(json.loads(x))
     except Exception as e:
-        print(f'An error occurred while executing the code: {str(e)}')
+        return str(e)
+
+variable_initialize()
+print(guessfunction())
