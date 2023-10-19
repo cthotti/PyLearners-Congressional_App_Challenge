@@ -62,6 +62,3 @@ def sidebar(x):
         return target_func(json.loads(x))
     except Exception as e:
         return str(e)
-
-variable_initialize()
-print(guessfunction())
