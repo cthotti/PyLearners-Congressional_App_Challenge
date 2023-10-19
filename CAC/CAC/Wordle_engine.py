@@ -3,7 +3,7 @@ import random
 
 
 #Getting Randomly Generated Guessing Library
-df = pd.read_csv('/Users/cthotti/VS Code/CAC/Library_Definitions.csv')
+df = pd.read_csv('/Users/chetant/VSCode/CAC/Library_Definitions.csv')
 random_index = random.randint(0,len(df['Library'])-1)
 library = df.loc[random_index]['Library']
 library_definition = df.loc[random_index]['Question']
