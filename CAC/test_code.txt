@@ -1,3 +1,4 @@
 #this is the file that is retrieved when users input their sample code
 def test_func(x):
-    return len(x)
+    return len(x)+sum(x)
+
