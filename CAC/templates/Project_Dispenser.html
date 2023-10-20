@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Project_Dispenser.css') }}" />
+</head>
+<body class="background_color">
+
+    <div class="title_box">
+        <p class="games_box games_text" onclick="open_box()">
+            Game
+        </p>
+        <p class="welcome_message">
+            Welcome to {Title}
+        </p>
+    </div>
+    
+    <div class="horizontal_display">
+        <div class="individual_games_box" id="individual_games_box_open">
+
+            <p class="individual_games_border individual_games_font">
+                Wordle Game
+            </p>
+            
+            <p class="individual_games_border individual_games_font">
+                Guessing Function Game
+            </p>
+
+            <p class="individual_games_border individual_games_font"> 
+                AI Bot Helper
+            </p>
+
+            <p class="individual_games_border individual_games_font">
+                Project Dispenser
+            </p>
+        </div>
+
+        <div>
+            <div>
+                <p class="title">Project Dispenser Lu</p>
+            </div>
+            <div>
+                <div class="difficulty_level">
+                    <p class="difficulty_level_words">Choose a Difficulty Level:</p>
+                </div>
+                <div class="horizontal_display">
+                    <div class="difficulty_1" onclick="output_difficulty1()">
+                        <p class="difficulty_1_words">1</p>
+                    </div>
+                    <div class="difficulty_2" onclick="output_difficulty2()">
+                        <p class="difficulty_2_words">2</p>
+                    </div>
+                    <div class="difficulty_3">
+                        <p class="difficulty_3_words" onclick="output_difficulty3()">3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div>
+        <div>
+
+        </div>
+    </div>
+
+<script src="{{ url_for('static',filename='Project_Dispenser.js') }}"></script>
+
+</body>
+
+</html>

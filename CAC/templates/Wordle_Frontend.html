@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Wordle_Frontend.css') }}" />
+</head>
+<body class="background_color">
+
+    <div class="title_box">
+        <p class="games_box games_text" onclick="open_box()">
+            Game
+        </p>
+        <p class="welcome_message">
+            Welcome to {Title}
+        </p>
+    </div>
+    
+    <div class="horizontal_display">
+        <div class="individual_games_box" id="individual_games_box_open">
+
+            <p class="individual_games_border individual_games_font">
+                Wordle Game
+            </p>
+            
+            <p class="individual_games_border individual_games_font">
+                Guessing Function Game
+            </p>
+
+            <p class="individual_games_border individual_games_font"> 
+                AI Bot Helper
+            </p>
+
+            <p class="individual_games_border individual_games_font">
+                Project Dispenser
+            </p>
+
+        </div>
+
+        <div>
+            <p class="wordle_content">
+                Wordle
+            </p>
+                
+            <div class="horizontal_display">
+            <ul class = "how_play">
+                How to Play: 
+                    <li class="how_play_content">
+                        Rule 1
+                    </li>
+                    <li class="how_play_content">
+                        Rule 2
+                    </li>
+                    <li class="how_play_content">
+                        Rule 3
+                    </li>
+            </ul>
+
+            <p class="library_def_box library_def_text">
+                Library Definitions
+            </p>
+            </div>
+
+            <div class="play_wordle_box" onclick="wordle_open()">
+                <p class="play_wordle_content">
+                Play Wordle
+                </p>
+            </div>
+
+            <div class="wordle_game_box" id="wordle_game_box_unknown"> 
+                <div>
+                    <p class="guessing_library">
+                        Guess the library that: 
+                    </p>
+                    <p id="library_definition_placeholder"></p>
+                </div>
+
+                <div class="horizontal_display" id="input_container">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+<script src="{{ url_for('static',filename='Wordle_Frontend.js') }}"></script>
+
+</body>
+
+</html>

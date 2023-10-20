@@ -1,0 +1,170 @@
+body, header, div{
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal_display{
+    display: flex;
+}
+
+.vertical_display{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.background_color{
+    background-color: #eafafe;
+    padding: 0px;
+}
+
+.title_box{
+    background-color: #F3CEB0;
+    max-width: 100%;
+    height: 80px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.games_box{
+    margin-left: 10px;
+    margin-bottom: 0px;
+    background-color: #C8A2C8;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.games_box:hover{
+    background-color: azure;
+}
+
+.welcome_message{
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    margin-right: 30%;
+}
+
+.individual_games_box{
+    background-color: #B2D3C2;
+    margin-left: 10px;
+    width: 130px;
+    padding-top: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.individual_games_boxes_open{
+    max-height: 500px;
+}
+
+
+.individual_games_border{
+    background-color: #99EDC3;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.individual_games_font{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration-color: white;
+
+}
+
+.content_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 50px;
+    color: goldenrod;
+    margin-left: 500px;
+    margin-top: 10px;
+}
+
+.difficulty_level{
+    margin-left: 20px;
+    margin-top: 30px;
+    color: lightseagreen;
+}
+
+.difficulty_level_words{
+    font-size: 30px;
+}
+
+.difficulty_1{
+    margin-left: 50px;
+    height: 80px;
+    width: 90px;
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+
+.difficulty_1:hover{
+    background: lightgray;
+}
+
+.difficulty_1_words{
+    margin-left: 40px;
+    margin-top: 25px;
+    font-size: 30px;
+    color: gray;
+}
+
+.difficulty_2{
+    margin-left: 30px;
+    height: 80px;
+    width: 90px;
+    border-radius: 5px;
+    background-color: yellowgreen;
+}
+
+.difficulty_2:hover{
+    background: lightgray;
+}
+
+.difficulty_2_words{
+    margin-left: 40px;
+    margin-top: 25px;
+    font-size: 30px;
+    color: gray;
+}
+
+.difficulty_3{
+    margin-left: 30px;
+    height: 80px;
+    width: 90px;
+    border-radius: 5px;
+    background-color: green;
+}
+
+.difficulty_3:hover{
+    background: lightgray;
+}
+
+.difficulty_3_words{
+    margin-left: 40px;
+    margin-top: 25px;
+    font-size: 30px;
+    color: gray;
+}
