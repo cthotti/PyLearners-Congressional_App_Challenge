@@ -1,0 +1,296 @@
+body, header, div{
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal_display{
+    display: flex;
+}
+
+.vertical_display{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.background_color{
+    background-color: whitesmoke;
+    padding: 0px;
+}
+
+.title_box{
+    background-color: rgb(31, 182, 31);
+    max-width: 100%;
+    height: 80px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.games_box{
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-color: rgb(9, 98, 9);
+    padding-top: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: rgb(224, 235, 239);
+}
+
+.welcome_message{
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    text-align: center;
+    color: rgb(224, 235, 239);
+    margin-right: 10%;
+}
+
+.individual_games_box{
+    background-color: #B2D3C2;
+    margin-left: 0px;
+    width: 170px;
+    padding-top: 20px;
+    margin-top: 0px;
+    border-radius: 5px;
+    max-height: 100%;
+}
+
+.individual_games_border{
+    background-color: #99EDC3;
+    padding: 5px;
+    border-radius: 20px;
+    margin-top: 250px;
+    margin-bottom: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.individual_games_border:hover{
+    background-color: rgb(232, 226, 226);;
+}
+
+.individual_games_font{
+    font-size: 25px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    text-align: center;
+    text-decoration-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.content_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.how_to_play_initial{
+    margin-top: 40px;
+    background-color: white;
+    margin-left: 50px;
+    height: 30px;
+    width: 1000px;
+}
+
+.how_to_play_content{
+    height: 300px;
+    width: 1000px;
+    background-color: white;
+    margin-left: 50px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.how_to_play_content_hidden{
+    height: 0px;
+}
+
+.minimize_button_words{
+    font-size: 40px;
+    margin-left: 20px;
+    color: #87ceeb;
+}
+
+.minimize_button_words:hover{
+    color: lightgray;
+}
+
+.minimize_button:hover{
+    background: lightgray;
+}
+
+.how_play_words{
+    color: gray;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.check_x{
+    margin-top: 40px;
+    background-color: whitesmoke;
+    height: 90px;
+    width: 125px;
+    margin-left: 200px;
+}
+
+.input_boxes{
+    background-color: whitesmoke;
+    height: 90px;
+    width: 125px;
+    text-align: center;
+}
+
+.check_x_words{
+    font-size: 30px;
+    text-align: center;
+}
+
+.check_fx{
+    margin-top: 40px;
+    background-color: whitesmoke;
+    height: 85px;
+    width: 125px;
+}
+
+.check_fx_words{
+    font-size: 30px;
+    text-align: center;
+}
+
+.check_x_box{
+    background-color: lightblue;
+    margin-left: 8px;
+    margin-top: 0px;
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+}
+
+.check_fx_box{
+    background-color: lightseagreen;
+    margin-left: 28px;
+    margin-top: 0px;
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+}
+
+.test_words{
+    margin-top: 10px;
+}
+
+.line_break{
+    background-color: black;
+    height: 3px;
+    width: 125px;
+    margin-bottom:0px;
+    margin-top: 45px;
+
+}
+
+.vertical_line_break{
+    margin-top: 40px;
+    height: 650px;
+    width: 3px;
+    background-color: gray;
+}
+
+.line_break_2{
+    background-color: gray;
+    height: 3px;
+    width: 125px;
+    margin-bottom:0px;
+}
+
+.output_boxes{
+    background-color: whitesmoke;
+    height: 90px;
+    width: 125px;
+}
+
+.submit_button{
+    height: 50px;
+    width: 100px;
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 500px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.submit_button:hover{
+    background-color: lightgray;
+}
+
+.submit_button_words{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(8, 119, 163);
+}
+
+.percent_box{
+    margin-left: 50px;
+    height: 150px;
+    width: 500px;
+    background-color: white;
+}
+
+.percent_box_hidden{
+    height: 0px;
+}
+
+.output_words{
+    margin-top: 0px;
+    font-size: 30px;
+    margin-left: 10px;
+    color: orangered;
+}
+
+.correct_box{
+    height: 40px;
+    width: 40px;
+    background-color: green;
+    margin-left: 20px;
+}
+
+.incorrect_box{
+    height: 40px;
+    width: 40px;
+    background-color: gray;
+    margin-left: 20px;
+}
+
+.testcasesclass{
+    font-size: 20px;
+    color: gray;
+}
+
+.ErrorOutputClass{
+    font-size: 30px;
+    color: lightcoral;
+}
+
+.numOutput{
+    font-size: 30px;
+    color: black;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.textarea_alignment{
+    margin-left: 50px;
+}
+
+.Guessing_Function_Text{
+    margin-left: 50px;
+    font-size: 30px;
+}
