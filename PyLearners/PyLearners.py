@@ -77,7 +77,7 @@ def output_difficulty3():
     return jsonify({'inputValue': project_info})
 
 ###### Guessing Function Game
-day0 = datetime(2023, 10, 12)
+day0 = datetime(2023, 10, 30)
 attempts=0
 daycurrent = None
 day = None
@@ -108,7 +108,7 @@ def variable_initialize():
 
 def sidebar(x):
     try:
-        return target_func(json.loads(x))
+        return target_func(x)
     except Exception as e:
         return str(e)
 

@@ -1,6 +1,26 @@
 [
     {
         "function": "def target_func(x):\n    x=int(x)\n    return x+3\n",
-        "test_cases": [1,2,3,4,5,6,7]
+        "test_cases": [1,2,3,4,5,6,7],
+        "input": "int",
+        "output": "int"
+    },
+    {
+        "function": "import json\ndef target_func(x):\n    if type(x) != list:\n        x=json.loads(x)\n    return len(x)+sum(x)\n",
+        "test_cases": [[0],[1],[0,0,0],[12,43,9375,1],[1234,2,0,0,0]],
+        "input": "list",
+        "output": "int"
+    },
+    {
+        "function": "def target_func(x):\n    return x[::-1]\n",
+        "test_cases": ["abc","def","a","asdofiajsdoifjasdfoijcaibdg","34gpoujqheuvnburng"],
+        "input": "str",
+        "output": "str"
+    },
+    {
+        "function": "def target_func(x):\n    return x.count('a')\n",
+        "test_cases": ["aababaa","def","a","asdofiajsdoifjasdfoijcaibdg","34gpoujqheuvnburng"],
+        "input": "str",
+        "output": "int"
     }
 ]
