@@ -45,10 +45,12 @@ def output_difficulty1():
     random_index = random.randint(0,len(df['Project'])-1)
     project = df.loc[random_index]['Project']
     project_description = df.loc[random_index]['Project Description']
+    project_solution = df.loc[random_index]['Youtube Link']
     length_of_project = len(project)
     project_info = []
     project_info.append(project)
     project_info.append(project_description)
+    project_info.append(project_solution)
     return jsonify({'inputValue': project_info})
 
 
@@ -58,10 +60,12 @@ def output_difficulty2():
     random_index = random.randint(0,len(df['Project'])-1)
     project = df.loc[random_index]['Project']
     project_description = df.loc[random_index]['Project Description']
+    project_solution = df.loc[random_index]['Youtube Link']
     length_of_project = len(project)
     project_info = []
     project_info.append(project)
     project_info.append(project_description)
+    project_info.append(project_solution)
     return jsonify({'inputValue': project_info})
 
 @app.route('/output_difficulty3', methods=['GET'])
@@ -70,10 +74,12 @@ def output_difficulty3():
     random_index = random.randint(0,len(df['Project'])-1)
     project = df.loc[random_index]['Project']
     project_description = df.loc[random_index]['Project Description']
+    project_solution = df.loc[random_index]['Youtube Link']
     length_of_project = len(project)
     project_info = []
     project_info.append(project)
     project_info.append(project_description)
+    project_info.append(project_solution)
     return jsonify({'inputValue': project_info})
 
 ###### Guessing Function Game
