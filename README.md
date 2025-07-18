@@ -11,7 +11,7 @@ challenges, allowing users to test their code against multiple cases. PyLearners
 making it easier to grow as a Python programmer. 
 
 ## Video Showcasing Our App
-[PyLearners Description] (https://youtu.be/mxa3ePqdbxc)
+[PyLearners Description](https://youtu.be/mxa3ePqdbxc)
 
 ## Using Our App
 ```bash
