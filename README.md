@@ -16,6 +16,7 @@ making it easier to grow as a Python programmer.
 ## Using Our App
 ```bash
 git clone https://github.com/cthotti/PyLearners-Congressional_App_Challenge.git
+cd PyLearners-Congressional_App_Challenge
 cd PyLearners
 python PyLearners.py
 ```
